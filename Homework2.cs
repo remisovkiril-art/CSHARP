@@ -1,102 +1,63 @@
-﻿using System;
-namespace CSHARP
-{
-    internal class Homework2
-    {
-        // Задание 5 
-        class Journal
-        {
-            private string name;
-            private int foundationYear;
-            private string description;
-            private string phone;
-            private string email;
-            public void Input()
-            {
-                Console.Write("Введите название журнала: ");
-                name = Console.ReadLine();
-                Console.Write("Введите год основания: ");
-                foundationYear = int.Parse(Console.ReadLine());
-                Console.Write("Введите описание журнала: ");
-                description = Console.ReadLine();
-                Console.Write("Введите контактный телефон: ");
-                phone = Console.ReadLine();
-                Console.Write("Введите контактный email: ");
-                email = Console.ReadLine();
-            }
-            public void Output()
-            {
-                Console.WriteLine("\nИнформация о журнале");
-                Console.WriteLine($"Название: {name}");
-                Console.WriteLine($"Год основания: {foundationYear}");
-                Console.WriteLine($"Описание: {description}");
-                Console.WriteLine($"Телефон: {phone}");
-                Console.WriteLine($"Email: {email}");
-            }
-            public string GetName()
-            {
-                return name;
-            }
-            public void SetName(string value)
-            {
-                name = value;
-            }
-        }
-        // Задание 6
-        class Shop
-        {
-            private string name;
-            private string address;
-            private string description;
-            private string phone;
-            private string email;
-            public void Input()
-            {
-                Console.Write("Введите название магазина: ");
-                name = Console.ReadLine();
-
-                Console.Write("Введите адрес магазина: ");
-                address = Console.ReadLine();
-
-                Console.Write("Введите описание профиля магазина: ");
-                description = Console.ReadLine();
-
-                Console.Write("Введите контактный телефон: ");
-                phone = Console.ReadLine();
-
-                Console.Write("Введите контактный email: ");
-                email = Console.ReadLine();
-            }
-
-            public void Output()
-            {
-                Console.WriteLine("\nИнформация о магазине");
-                Console.WriteLine($"Название: {name}");
-                Console.WriteLine($"Адрес: {address}");
-                Console.WriteLine($"Описание: {description}");
-                Console.WriteLine($"Телефон: {phone}");
-                Console.WriteLine($"Email: {email}");
-            }
-            public string GetAddress()
-            {
-                return address;
-            }
-
-            public void SetAddress(string value)
-            {
-                address = value;
-            }
-        }
-        static void Main()
-        {
-            Journal journal = new Journal();
-            Console.WriteLine("Ввод данных для журнала:");
-            journal.Input();
-            journal.Output();
-            Shop shop = new Shop();
-            Console.WriteLine("\nВвод данных для магазина:");
-            shop.Input();
-            shop.Output();
-        }
-    }
-}
+//using System;
+//using System.Linq;
+//namespace CSHARP
+//{
+//    class Phone
+//    {
+//        public string Name { get; set; }
+//        public string Manufacturer { get; set; }
+//        public decimal Price { get; set; }
+//        public DateTime ReleaseDate { get; set; }
+//        public Phone(string name, string manufacturer, decimal price, DateTime releaseDate)
+//        {
+//            Name = name;
+//            Manufacturer = manufacturer;
+//            Price = price;
+//            ReleaseDate = releaseDate;
+//        }
+//        public void Show()
+//        {
+//            Console.WriteLine($"Модель: {Name}");
+//            Console.WriteLine($"Производитель: {Manufacturer}");
+//            Console.WriteLine($"Цена: {Price}");
+//            Console.WriteLine($"Дата выпуска: {ReleaseDate.ToShortDateString()}");
+//            Console.WriteLine();
+//        }
+//    }
+//    class Program
+//    {
+//        static void Main()
+//        {
+//            Phone[] phones =
+//            {
+//                new Phone("Galaxy S22", "Samsung", 800, new DateTime(2022, 2, 1)),
+//                new Phone("iPhone 11", "Apple", 500, new DateTime(2019, 9, 10)),
+//                new Phone("Redmi Note 10", "Xiaomi", 250, new DateTime(2021, 3, 5)),
+//                new Phone("iPhone 15", "Apple", 1100, new DateTime(2023, 9, 15)),
+//                new Phone("Galaxy A52", "Samsung", 400, new DateTime(2021, 1, 20))
+//            };
+//            Console.WriteLine("Всего телефонов: " + phones.Count());
+//            Console.WriteLine("Телефонов дороже 100: " +
+//                phones.Count(p => p.Price > 100));
+//            Console.WriteLine("Телефонов с ценой от 400 до 700: " +
+//                phones.Count(p => p.Price >= 400 && p.Price <= 700));
+//            string manufacturer = "Apple";
+//            Console.WriteLine($"Телефонов производителя {manufacturer}: " +
+//                phones.Count(p => p.Manufacturer == manufacturer));
+//            Phone minPricePhone = phones.MinBy(p => p.Price);
+//            Console.WriteLine("\nТелефон с минимальной ценой:");
+//            minPricePhone.Show();
+//            Phone maxPricePhone = phones.MaxBy(p => p.Price);
+//            Console.WriteLine("Телефон с максимальной ценой:");
+//            maxPricePhone.Show();
+//            Phone oldestPhone = phones.MinBy(p => p.ReleaseDate);
+//            Console.WriteLine("Самый старый телефон:");
+//            oldestPhone.Show();
+//            Phone newestPhone = phones.MaxBy(p => p.ReleaseDate);
+//            Console.WriteLine("Самый новый телефон:");
+//            newestPhone.Show();
+//            decimal averagePrice = phones.Average(p => p.Price);
+//            Console.WriteLine("Средняя цена телефона: " + averagePrice);
+//        }
+//    }
+//}
